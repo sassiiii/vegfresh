@@ -3,6 +3,12 @@
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+<!-- BEAE-GLOBAL-FONT --> 
+{% capture the_snippet_global_font %}{% include 'beae-global-font' %}{% endcapture %} {% unless the_snippet_global_font contains 'Liquid error' %} {{ the_snippet_global_font }} {% endunless %} 
+ <!-- END BEAE-GLOBAL-FONT -->
+<!-- BEAE-HEADER --> 
+{%- render 'beae_header' -%}
+<!-- END BEAE-HEADER -->
 
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
@@ -682,5 +688,11 @@ jQuery(document.body).on('afterCartLoad.ajaxCart', function(evt, cart) {
 </script>
 {% endif %}
 {% include 'back-to-the-top' %}
-</body>
+
+<!-- BEAE-FOOTER --> 
+{%- render 'beae_footer' -%}
+<!-- END BEAE-FOOTER -->
+<!-- BEAE-AB-SNIPPET --> 
+{%- render 'beae_ab_snippet' -%}
+<!-- BEAE-AB-SNIPPET --></body>
 </html>
