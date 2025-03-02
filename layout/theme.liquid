@@ -99,35 +99,50 @@
     margin-top: 150px !important;  /* Adjust as needed */
 }
 </style>
+  
 <style>
-/* Ensure products align properly in catalog */
+/* Fix the product grid layout */
 .template-collection .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adds space between products */
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;  /* Adds space between products */
+    max-width: 1200px;  /* Prevents it from stretching too much */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .template-collection .grid__item {
     flex: 1 1 calc(25% - 20px); /* Ensures 4 items per row */
     max-width: 25%;
+    text-align: center;
     box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
     .template-collection .grid__item {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+        flex: 1 1 calc(50% - 20px); /* 2 per row on tablets */
         max-width: 50%;
     }
 }
 
 @media (max-width: 480px) {
     .template-collection .grid__item {
-        flex: 1 1 100%; /* 1 item per row on mobile */
+        flex: 1 1 100%; /* 1 per row on mobile */
         max-width: 100%;
     }
 }
+
+/* Ensure product titles, images, and prices align */
+.template-collection .grid__item h2,
+.template-collection .grid__item p {
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
 </style>
+
 
 </head>
 
