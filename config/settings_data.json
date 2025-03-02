@@ -102,5 +102,10 @@
       "social_facebook_link": "",
       "social_twitter_link": ""
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".footer-payment-icons {margin-top: 40px !important; /* Adjust as needed */}"
+    ]
   }
 }
