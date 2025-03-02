@@ -99,6 +99,29 @@
     margin-top: 150px !important;  /* Adjust as needed */
 }
 </style>
+<style>
+.product-card { 
+    position: relative;  
+    z-index: 1;
+}
+
+.product-card:hover {
+    z-index: 2;
+}
+
+.product-card .shop-now-button {
+    position: absolute;
+    bottom: 10px;  
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.product-card .product-info {
+    z-index: 2; 
+    background: white; 
+}
+</style>
 
 </head>
 
