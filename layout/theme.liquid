@@ -397,17 +397,12 @@ Add the page template as a class for easy page or template specific styling.
     {% endcomment %}
   </div>
 <style>
-  .wpf_coll_img_container{
-    height:450px;
-    background-image: url('{% if collection.image %}{{ collection | img_url: '1345x500' }}{% else %}{{ settings.slider_1 | img_url: '1345x500', format: 'jpg'  }}{% endif %}');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+  .wpf_coll_img_container {
+    background-color: white !important;
+    background-image: none !important;
+}
+
+
 </style>
 
   {% endif %}
