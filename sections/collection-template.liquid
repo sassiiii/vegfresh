@@ -1,6 +1,13 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+{% paginate collection.products by 12 %}
+<div class="grid">
+  {% for product in collection.products %}
+    <div class="grid__item">
+      <a href="{{ product.url }}">
+        <img src="{{ product.featured_image | img_url: '500x500' }}" alt="{{ product.title }}">
+      </a>
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.price | money }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endpaginate %}
