@@ -396,7 +396,7 @@ Add the page template as a class for easy page or template specific styling.
     spacing for parallux image
     {% endcomment %}
   </div>
-  <style>
+<style>
   .wpf_coll_img_container{
     height:450px;
     background-image: url('{% if collection.image %}{{ collection | img_url: '1345x500' }}{% else %}{{ settings.slider_1 | img_url: '1345x500', format: 'jpg'  }}{% endif %}');
@@ -406,11 +406,10 @@ Add the page template as a class for easy page or template specific styling.
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover
-
+    background-size: cover;
   }
+</style>
 
-  </style>
   {% endif %}
 
   <main class="wrapper main-content" role="main">
